@@ -11,14 +11,14 @@ class ToDoItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(bottom: 20),
+      padding: EdgeInsets.only(bottom: 13),
       child: ListTile(
         onTap: () {
           //print('Clicked on Todo Item');
           onToDoChanged(todo);
         },
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+        contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical:5),
         tileColor: Colors.white,
         leading: Icon(
           todo.isDone ? Icons.check_box : Icons.check_box_outline_blank,
@@ -38,7 +38,7 @@ class ToDoItem extends StatelessWidget {
           height: 35,
           width: 35,
           decoration: BoxDecoration(
-            color: tdRed,
+            color: const Color.fromARGB(255, 194, 183, 225),
             borderRadius: BorderRadius.circular(5),
           ),
           child: IconButton(
