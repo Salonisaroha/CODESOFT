@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 import 'package:table_calendar/table_calendar.dart';
 import 'package:todo_app_list/constants/colors.dart';
 import 'package:todo_app_list/model/todo.dart';
@@ -14,7 +15,7 @@ import 'package:todo_app_list/screens/send_feedback.dart';
 import 'package:todo_app_list/screens/my_header_drawer.dart';
 
 class Home extends StatefulWidget {
-  Home({Key? key}) : super(key: key);
+  const Home({Key? key}) : super(key: key);
 
   @override
   _HomeState createState() => _HomeState();
@@ -34,7 +35,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     Widget container;
     if (currentPage == DrawerSections.master_home && _currentIndex == 0) {
-      container = MasterHome();
+      container = const MasterHome();
     } else if (currentPage == DrawerSections.dashboard) {
       container = DashboardPage();
     } else if (currentPage == DrawerSections.contacts) {
@@ -52,13 +53,13 @@ class _HomeState extends State<Home> {
     } else if (currentPage == DrawerSections.send_feedback) {
       container = SendFeedbackPage();
     } else if (_currentIndex == 0) {
-      container = MasterHome();
+      container = const MasterHome();
     } else if (_currentIndex == 1) {
       container = CalendarPage();
     } else if (_currentIndex == 2) {
       container = MinePage();
     } else {
-      container = MasterHome();
+      container = const MasterHome();
     }
 
     return Scaffold(
@@ -86,7 +87,7 @@ class _HomeState extends State<Home> {
           child: Container(
             child: Column(
               children: [
-                MyHeaderDrawer(),
+                const MyHeaderDrawer(),
                 MyDrawerList(),
               ],
             ),
@@ -207,7 +208,7 @@ class _HomeState extends State<Home> {
                 flex: 3,
                 child: Text(
                   title,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.black,
                     fontSize: 16,
                   ),

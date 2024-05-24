@@ -4,30 +4,30 @@ class ContactsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(16.0),
       child: Column(
         children: [
           Container(
             width: 500,
             height: 300,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/images/contacts.png'),
                 fit: BoxFit.cover,
               ),
             ),
           ),
-          SizedBox(height: 16),
-          Center(
+          const SizedBox(height: 16),
+          const Center(
             child: Text(
               "Contacts Page",
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
           ),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           Expanded(
             child: ListView(
-              children: [
+              children: const [
                 ListTile(
                   leading: CircleAvatar(
                     backgroundImage: AssetImage('assets/images/avatar.jpeg'),

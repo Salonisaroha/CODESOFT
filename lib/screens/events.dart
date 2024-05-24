@@ -12,16 +12,16 @@ class _EventsPageState extends State<EventsPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(16.0),
       child: Column(
         children: [
-          Center(
+          const Center(
             child: Text(
               "Events Page",
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
           ),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           TableCalendar(
             firstDay: DateTime.utc(2020, 1, 1),
             lastDay: DateTime.utc(2030, 12, 31),
@@ -30,10 +30,10 @@ class _EventsPageState extends State<EventsPage> {
               _focusedDay = focusedDay;
             },
           ),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           Expanded(
             child: ListView(
-              children: [
+              children: const [
                 ListTile(
                   leading: Icon(Icons.notifications),
                   title: Text('Event Reminder 1'),
